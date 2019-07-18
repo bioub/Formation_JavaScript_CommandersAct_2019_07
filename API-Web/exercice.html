@@ -18,8 +18,25 @@
   </style>
 </head>
 <body class="oui">
-  <button>Oui</button>
+  <button class="threeStatesButton">Oui</button>
   <script>
+    var mapping = {
+      oui: 'Oui',
+      non: 'Non',
+      maybe: 'Peut-être',
+    };
+    var values = Object.values(mapping);
+    var classes = Object.keys(mapping);
+    var index = 0;
+
+    /** @type HTMLButtonElement */
+    var btn = document.querySelector('.threeStatesButton');
+    btn.addEventListener('click', function() {
+      document.body.classList.remove(classes[index]);
+      index = (index + 1) % 3;
+      document.body.classList.add(classes[index]);
+      btn.innerText = values[index];
+    });
   /*
     Au clic du boutton on passe son contenu de 
     Oui -> Non
