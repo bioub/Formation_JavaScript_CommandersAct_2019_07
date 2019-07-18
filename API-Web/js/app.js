@@ -37,7 +37,9 @@ document.addEventListener('DOMContentLoaded', function() {
     // Au clic du bouton supprimer la balise ligne de la div
     // MDN : https://developer.mozilla.org/fr/docs/Web/API/Node/removeChild
     // https://developer.mozilla.org/fr/docs/Web/API/ChildNode/remove
-    
+    btnMoins.addEventListener('click', function() {
+      div.removeChild(ligne);
+    });
 
     div.appendChild(ligne);
   });
