@@ -7,6 +7,8 @@ hello();
 hello();
 
 function bonjour(prenom) {
+  // var prenom = 'Romain'; // prenom n'existe qu'ici (portée de la variable : fonction)
+  // var prenom = prenomEnDehors; // prenom n'existe qu'ici (portée de la variable : fonction)
   console.log('Bonjour ' + prenom + ' !');
 }
 
@@ -30,3 +32,4 @@ function addition(nb1, nb2) {
 }
 
 console.log(addition(1, 2)); // 3
+console.log(addition(entierAleaEntre0et100(), entierAleaEntre0et100())); // 3

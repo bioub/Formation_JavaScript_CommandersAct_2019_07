@@ -14,9 +14,9 @@ console.log(3 % 2); // modulo (reste de la division entière)
 // 3 = 2 * 1 + 1  (module c'est le + 1)
 /*
 Comme dans les divisions en primaire
- 3 | 2
----+------
- 1 | 1
+ 7 | 2
+ --+------
+ 1 | 3
 mod|
 */
 
@@ -59,7 +59,10 @@ console.log(12 != '12'); // false (false après conversion)
 // bonne pratique : commencer par la valeur
 // en cas d'oubli d'un =, erreur de syntaxe
 // sinon le code fonctionne et est difficile à déboguer
-if ('Romain' = prenom) {}
+
+if ('Romain' = prenom) {
+
+}
 */
 
 // Opérateur logiques (sur les booléens)

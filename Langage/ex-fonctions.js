@@ -4,7 +4,7 @@
 // console.log(nomComplet);
 
 function creerNomComplet(prenom, nom) {
-
+  return prenom + ' ' + nom;
 }
 
 // Ajouter un return dans la fonction tel que le code suivant affiche
@@ -14,7 +14,7 @@ console.log(creerNomComplet('Romain', 'Bohdanowicz'));
 // var estPair = nom.length % 2 === 0;
 
 function estPair(nb) {
-
+  return nb % 2 === 0;
 }
 
 // Compléter estPair tel que le code suivant fonctionne
@@ -36,7 +36,13 @@ console.log('Le prénom aléatoire est : ' + prenomAlea);
 // }
 
 // Créer une fonction afficheSi4Lettres qui affiche 'Le prénom fait 4 lettres' si le prénom passé en entrée est pair
-// afficheSi4Lettres(prenomAlea);
+function afficheSi4Lettres(prenom) {
+  if (prenom.length === 4) {
+    console.log('Le prénom fait 4 lettres');
+  }
+}
+
+afficheSi4Lettres(prenomAlea);
 
 // for (var i = 0; i < prenoms.length; i++) {
 //   const prenom = prenoms[i];
@@ -44,6 +50,19 @@ console.log('Le prénom aléatoire est : ' + prenomAlea);
 //     console.log(prenom);
 //   }
 // }
+
+function filtreTableauParTaille(tableau, taille) {
+  var resultat = [];
+
+  for (var i = 0; i < tableau.length; i++) {
+    const elt = tableau[i];
+    if (elt.length === taille) {
+      resultat.push(elt);
+    }
+  }
+
+  return resultat;
+}
 
 var prenomsDe4Lettres = filtreTableauParTaille(prenoms, 4);
 console.log(prenomsDe4Lettres); // [Jean, Eric]
